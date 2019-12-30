@@ -5,3 +5,8 @@ Dockerized coTurn service configured to work for Nextcloud
 
 create a secret:
 openssl rand -hex 32
+
+| Variable | Default | Description |
+| -------- | ------- | ----------- |
+| REALM | stun.mydomain.tld | your domain/host name |
+| SECRET | $(openssl rand -hex 32) | a secret key to use with Nextcloud Talk |
