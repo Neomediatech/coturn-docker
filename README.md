@@ -11,5 +11,5 @@ openssl rand -hex 32
 | REALM | stun.mydomain.tld | your domain/host name |
 | SECRET | $(openssl rand -hex 32) | a secret key to use with Nextcloud Talk |
 
-### Running (image is not yet built as of 30 dec 2019)
+### Running
 `docker run -d --name coturn -e SECRET=AsuperSecretKey999 -e REALM=stun.yourdomain.tld -p 3478:3478/udp -p 3478:3478/tcp neomediatech/coturn`
