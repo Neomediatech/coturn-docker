@@ -1,0 +1,30 @@
+# REALM: your domain/host name
+# SECRET: a secret key to use with Nextcloud Talk
+
+version: '3.7'
+
+x-environment: &common-vars
+    REALM: 
+    SECRET: 
+
+x-vol-tz: &v-tz /etc/timezone:/etc/timezone:ro
+x-vol-ltime: &v-ltime /etc/localtime:/etc/localtime:ro
+x-vol-lgen: &v-lgen /etc/locale.gen:/etc/locale.gen:ro
+x-vols: &vols
+  - *v-tz
+  - *v-ltime
+  - *v-lgen
+
+services:
+  coturn:
+    image: neomediatech/coturn
+    hostname: coturn
+    deploy:
+      replicas: 1    
+    restart: always
+    volumes:
+      - *v-tz
+      - *v-ltime
+      - *v-lgen
+    environment:
+      << : *common-vars
