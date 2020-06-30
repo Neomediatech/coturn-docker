@@ -22,6 +22,11 @@ services:
     deploy:
       replicas: 1    
     restart: always
+    ports:
+      - target: 3478
+        published: 3478
+        protocol: tcp
+        mode: host
     volumes:
       - *v-tz
       - *v-ltime
