@@ -1,6 +1,6 @@
-FROM neomediatech/ubuntu-base
+FROM neomediatech/ubuntu-base:20.04
 
-ENV VERSION=4.5.0.7 \
+ENV VERSION=4.5.1.1 \
     SERVICE=coturn \
     OS=ubuntu \
     DEBIAN_FRONTEND=noninteractive 
