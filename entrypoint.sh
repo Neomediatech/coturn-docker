@@ -19,7 +19,7 @@ echo "
 listening-port=3478
 fingerprint
 # Only on coTURN below v4.5.0.8!
-lt-cred-mech 
+# lt-cred-mech 
 use-auth-secret
 static-auth-secret=$SECRET
 realm=$REALM
@@ -27,7 +27,7 @@ total-quota=100
 bps-capacity=0
 stale-nonce
 # Only on coTURN below v4.5.1.0!
-no-loopback-peers 
+# no-loopback-peers 
 no-multicast-peers
 " | tee /etc/turnserver.conf
 
